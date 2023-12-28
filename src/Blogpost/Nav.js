@@ -56,6 +56,8 @@ const Nav = ({search, setsearch,handlesearch}) => {
 
   const location=useLocation();
   // adding Border bottom to current page
+  const editpostregex=/^\/editpost\/.*$/;
+  const postpageregex=/^\/post\/.*$/;
   useEffect(() => {
     const allMenuItems = document.querySelectorAll('nav li a');
     allMenuItems.forEach((item) => {
@@ -83,6 +85,15 @@ const Nav = ({search, setsearch,handlesearch}) => {
       document.querySelector('.toDoli').style.borderBottom = '2px solid #ff7878';
       document.querySelector('.toDoli').style.color = '#ff7878';
     }
+    else if(editpostregex.test(location.pathname)){
+      document.title="EditPage | BlogPost"
+      
+    }
+    else if(postpageregex.test(location.pathname)){
+      document.title="PostPage | BlogPost"
+      
+    }
+    console.log(location.pathname);
   }, [location.pathname])
   
   

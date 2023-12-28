@@ -1,0 +1,35 @@
+/* Apply styles to the AboutPage component */
+
+.aboutpage .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: start;
+  }
+  
+  .aboutpage .container  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .aboutpage .container  p {
+    line-height: 1.6;
+    color: #392e2e;
+    font-size: 1.1rem;
+  }
+  
+  /* Add a background color for better contrast */
+  .aboutpage {
+    background-color: #f4f4f4;
+  }
+  
+  /* Style links with a color and underline on hover */
+  .aboutpage .container  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .aboutpage .container  a:hover {
+    text-decoration: underline;
+  }
+  

@@ -19,9 +19,13 @@ export default function Postpage({posts,handleDelete,handleEdit,}) {
 
     <div>
       <button onClick={()=>handleDelete(post.id)} >Delete</button>
-      {/* <button onClick={handleButton1Click}>Button 1</button> */}
-      <button >&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</button>
-      {/* <button onClick={handleButton2Click}>Button 2</button> */}
+      
+      <button onClick={()=>{
+        handleEdit(post.id)
+      }} >&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp; 
+
+      </button>
+      
     </div>
   </div>):<>
   <Link to={'/'}  style={{display:'flex', margin:'10px auto', justifyContent:'center',textDecoration:'none'}}><span style={{padding:'0.8em', border:'1.5px solid black', cursor:'pointer',borderRadius:'5px',color:'#ff7878',fontSize:'1.1rem',fontWeight:'500',textDecoration:'none'}}>Show All Posts</span></Link>

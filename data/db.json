@@ -2,17 +2,17 @@
   "items": [
     {
       "id": 1,
-      "checked": true,
+      "checked": false,
       "item": "Cookies"
     },
     {
       "id": 2,
-      "checked": true,
+      "checked": false,
       "item": "Chocolates"
     },
     {
       "id": 3,
-      "checked": true,
+      "checked": false,
       "item": "Latte"
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "id": 7,
-      "checked": false,
+      "checked": true,
       "item": "Sex agar Mile toh"
     },
     {
