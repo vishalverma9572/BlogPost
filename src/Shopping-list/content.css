@@ -1,0 +1,100 @@
+.content ul li{
+    list-style: none;
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: #737881;
+  }
+  .content{
+    display: block;
+  }
+  .content ul li p{
+    width: 80%;
+    text-align: start;
+  }
+  .content ul li input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border: 2px solid gray;
+    box-shadow: black;
+  }
+  .content ul li svg{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    color: #124bc6;
+    position: relative;
+    right: 10px;
+  }
+  .content ul li svg:hover,
+  .content ul li svg:focus{
+    color: rgb(184, 22, 22);
+    transform: scale(1.1);
+  }
+  .content .addform {
+    width: 50%;
+    display: flex;
+   
+    justify-content: flex-start;
+    margin: auto;
+    padding: 0.5em;
+    border-bottom: 1px solid #eee;
+    
+  }
+  
+  .content .addform label {
+    position: absolute;
+    left: -99999px;
+  }
+  
+  .content .addform input[type='text'] {
+    flex-grow: 1;
+    max-width: calc(100% - 50px);
+    min-height: 30px;
+    font-size: 1rem;
+    padding: 0.25rem;
+
+    border-radius: 0.25rem;
+    margin-right: 0.25rem;
+    outline: none;
+  }
+  
+  .content button {
+    height: 38px;
+    min-width: 38px;
+    border-radius: 0.25rem;
+    margin-top: 1px;
+    padding: 0;
+    font-size: 1rem;
+    background-color: aliceblue;
+    color: #124bc6;
+    cursor: pointer;
+  }
+  
+  .content button:focus, 
+  .content button:hover {
+    color: #ff7878;
+    background-color: #333333;
+    outline: none;
+  }
+  .content button svg{
+    width: 35px;
+    height: 35px;
+  }
+  
+  .content #search-items{
+    width: 48%;
+    display: block;
+    padding: 0.3em;
+    margin: auto;
+    margin-top:15px ;
+    min-height: 25px;
+    font-size: 1.1rem;
+    border: 2px solid rgb(4, 4, 4);
+    border-radius: 5px;
+  }
+  

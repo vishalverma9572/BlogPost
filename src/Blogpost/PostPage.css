@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.post-page {
+    
+    margin: 0 auto;
+    margin-top:20px ;
+    padding: 20px;
+    width: 85%;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .post-page h2 {
+    color: #333;
+    margin-bottom: 10px; /* Space between title and date */
+    text-align: start;
+    margin-left: 30px;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  .post-page p{
+    text-align: end;
+    margin-right: 30px;
+    font-family: 'Diphylleia', serif;
+    color: red;
+    
+  }
+  
+  .post-content {
+    border: 2.5px solid #ddd;
+    max-width: 80%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 8px;
+   
+    margin-bottom: 50px; /* Space between content and buttons */
+  }
+  
+  .post-content p {
+    margin: 0;
+    color: initial;
+    text-align: start;
+    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+    
+  }
+  
+  button {
+    padding: 8px 16px;
+    
+    color: #d64545;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 50px;
+  }
+  
+  button:hover {
+    background-color: #333333;
+    color: #ff7878;
+  }
+  

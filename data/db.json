@@ -7,13 +7,33 @@
     },
     {
       "id": 2,
-      "checked": false,
+      "checked": true,
       "item": "Chocolates"
     },
     {
       "id": 3,
-      "checked": false,
+      "checked": true,
       "item": "Latte"
+    },
+    {
+      "id": 6,
+      "checked": false,
+      "item": "JetSpray"
+    },
+    {
+      "id": 7,
+      "checked": false,
+      "item": "Sex agar Mile toh"
+    },
+    {
+      "id": 8,
+      "checked": false,
+      "item": "Love"
+    },
+    {
+      "id": 9,
+      "checked": false,
+      "item": "Affection"
     }
   ]
 }

@@ -4,6 +4,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import { FaPlus } from "react-icons/fa6";
 import Spinner from "./Spinner";
 import apirequest from "./apirequest";
+import './content.css'
 
 export default function Content() {
   const Api_url = "http://localhost:3500/items";
@@ -98,8 +99,8 @@ export default function Content() {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <main>
-      <form className="addform" onSubmit={handlesubmit}>
+    <main className="content">
+      <div><form className="addform" onSubmit={handlesubmit}>
         <label htmlFor="addinp ">Add items</label>
         <input
           autoFocus
@@ -126,7 +127,7 @@ export default function Content() {
         type="text"
         placeholder="Search Items"
         onChange={(e) => setSearchText(e.target.value)}
-      />
+      /></div>
       {fetcherror && (
         <p className="error-banner">
           `{fetcherror}, Please ReLoad or Try After Some Time``
