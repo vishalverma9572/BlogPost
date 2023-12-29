@@ -11,7 +11,7 @@ export default function Spinner() {
             display:'block',
             width:'10%',
             margin:'auto',
-            marginTop:'20px'
+            marginTop:'20vh'
 
         }
     }
@@ -21,7 +21,8 @@ export default function Spinner() {
     style={
         {
             fontSize:'1.1rem',
-            marginTop:'-25px'
+            marginTop:'-8px',
+            marginBottom:'30vh'
         }
     }>Loading...</p>
     </>

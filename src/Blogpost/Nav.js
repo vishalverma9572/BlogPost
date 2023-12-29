@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import { Link,useLocation } from 'react-router-dom';
+import { Link,useLocation,useNavigate } from 'react-router-dom';
 import './Nav.css'
 
-const Nav = ({search, setsearch,handlesearch}) => {
+const Nav = ({search, setsearch,handlesearch,FormData}) => {
+  const navigate=useNavigate();
   const navStyle = {
     marginTop: '10px',
     backgroundColor: '#333', // Dark background color
@@ -87,13 +88,19 @@ const Nav = ({search, setsearch,handlesearch}) => {
     }
     else if(editpostregex.test(location.pathname)){
       document.title="EditPage | BlogPost"
+      if(!(location.pathname.slice(10))){
+          navigate('/')
+      }
+      else if((location.pathname.slice(10))&&(!FormData.title)){
+        navigate(`/post/${location.pathname.slice(10)}`)
+      }
       
     }
     else if(postpageregex.test(location.pathname)){
       document.title="PostPage | BlogPost"
       
     }
-    console.log(location.pathname);
+    
   }, [location.pathname])
   
   
