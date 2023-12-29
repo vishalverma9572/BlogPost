@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Features](#features)
-- [Getting Started](#getting-started)
+- [Getting Started](#to-use-this-and-getting-started)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
@@ -35,7 +35,7 @@
 
 ### Permanent saved
 - All data is saved in `data/db.json`
-## To use this  
+## To use this And Getting Started 
 
 1. **Clone the repository:**
 
