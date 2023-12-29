@@ -11,6 +11,7 @@ export default function Content() {
   const [fetcherror, setFetcherror] = useState(null);
   const [Loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
+
   useEffect(() => {
     const fetch_data = async () => {
       try {
@@ -18,18 +19,18 @@ export default function Content() {
         if (!response.ok) throw Error("Did not Recived Expected Data");
         const listitems = await response.json();
         await setItems(listitems);
-        
+
         setLoading(false);
         console.log(listitems);
         // to remove fetch error if already set
         setFetcherror(null);
       } catch (err) {
-        setLoading(false)
+        setLoading(false);
         setFetcherror(err.message);
         console.log(err.message);
       }
     };
-    setTimeout(fetch_data,2000);
+    setTimeout(fetch_data, 2000);
     // settime out me hume call nhi bas function ka nam dalna h agar call kar denge to wo run ho jayega
     // setTimeout(()=>{
     //     fetch_data();
@@ -60,6 +61,7 @@ export default function Content() {
     console.log(Updateoption);
 
   };
+
   const handledelete = async(id) => {
     let newitems = items.filter((item) => item.id !== id);
     setandsave(newitems);
@@ -72,7 +74,8 @@ export default function Content() {
 
   const [newitem, setNewitem] = useState("");
   const addinputref = useRef();
-  const handlesubmit = async(e) => {
+
+  const handlesubmit = async (e) => {
     e.preventDefault();
     if (!newitem) {
       return;
@@ -84,58 +87,59 @@ export default function Content() {
     // console.log(newitems)
     setandsave(newitems);
     setNewitem("");
-    const postOption={
-        method:'POST',
-        headers:{
-            'Content-Type': 'application/json'
-        },
-        body:JSON.stringify(myItem)
-
-    }
-    const result= await apirequest(Api_url,postOption)
-    if(result) setFetcherror(result);
+    const postOption = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(myItem),
+    };
+    const result = await apirequest(Api_url, postOption);
+    if (result) setFetcherror(result);
   };
 
   const [searchText, setSearchText] = useState("");
 
   return (
     <main className="content">
-      <div><form className="addform" onSubmit={handlesubmit}>
-        <label htmlFor="addinp ">Add items</label>
-        <input
-          autoFocus
-          name="addinp"
-          type="text"
-          ref={addinputref}
-          placeholder="Add items"
-          value={newitem}
-          onChange={(e) => setNewitem(e.target.value)}
-        />
-        <button
-          type="submit"
-          aria-label="Add item"
-          onClick={() => addinputref.current.focus()}
-        >
-          <FaPlus />
-        </button>
-      </form>
+      <div>
+        <form className="addform" onSubmit={handlesubmit}>
+          <label htmlFor="addinp ">Add items</label>
+          <input
+            autoFocus
+            name="addinp"
+            type="text"
+            ref={addinputref}
+            placeholder="Add items"
+            value={newitem}
+            onChange={(e) => setNewitem(e.target.value)}
+          />
+          <button
+            type="submit"
+            aria-label="Add item"
+            onClick={() => addinputref.current.focus()}
+          >
+            <FaPlus />
+          </button>
+        </form>
 
-      <input
-        id="search-items"
-        role="searchbox"
-        value={searchText}
-        type="text"
-        placeholder="Search Items"
-        onChange={(e) => setSearchText(e.target.value)}
-      /></div>
+        <input
+          id="search-items"
+          role="searchbox"
+          value={searchText}
+          type="text"
+          placeholder="Search Items"
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      </div>
       {fetcherror && (
         <p className="error-banner">
           `{fetcherror}, Please ReLoad or Try After Some Time``
         </p>
       )}
-      {
-        !Loading?
-        <>{!fetcherror && (
+      {!Loading ? (
+        <>
+          {!fetcherror && (
             <>
               {
                 <>
@@ -183,10 +187,11 @@ export default function Content() {
                 </>
               }
             </>
-          )}</>
-          :<Spinner/>
-        
-      }
+          )}
+        </>
+      ) : (
+        <Spinner />
+      )}
     </main>
   );
 }

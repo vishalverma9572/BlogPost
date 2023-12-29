@@ -1,6 +1,6 @@
 # BlogPost Website
 
-🚀 Welcome to the BlogPost website! This project allows you to manage your blogs and create a Todo list.
+🚀 Welcome to the BlogPost website! This project allows you to manage your blogs and Manage a Todo list. Nice thing is that All the data is being updated on Local `Json-Server`. It's a React Project in which axios Jso-server and many npm modules have been Used
 
 ## Table of Contents
 - [Features](#features)
@@ -20,7 +20,11 @@
 - Navidate through UI or ('/newpost') to newpost page create a Blog.
 - To Edit or Delete the Post Navigate to respective Postpage
 - To search the Post type Keyword in Searchbox and press enter.
-
+- Everything saved on local `json server`
+- To start Server 
+    ```bash
+        npx json-server -p 3500 -w  data/db.json`
+- `Both Run on same Json Server.`
 
 ### Todo List
 - Create, edit, check, and delete tasks in the Todo page.
@@ -29,12 +33,29 @@
     ```bash
         npx json-server -p 3500 -w  data/db.json`
 
-## Getting Started
+### Permanent saved
+- All data is saved in `data/db.json`
+## To use this  
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/BlogPost-Website.git
+   git clone https://github.com/your-username/BlogPost-Website.git`
+
+2. **To Download All Dependencies:**
+   ```bash
+      npm i 
+
+
+3. **To start Json server:**
+   ```bash
+   npx json-server -p 3500 -w  data/db.json 
+ 
+4. **To start react app:**
+   ```bash
+    npm run start
+
+
 ## Usage
 
 ### Blog Management
@@ -50,18 +71,45 @@
 - **React:** JavaScript library for building user interfaces.
 - **React Router:** Declarative routing for React.js.
 - **JSON Server:** Fake REST API for testing and prototyping.
+- **Axios** for apirequests 
+- It has Both axios as well as selfwritten apirequest functions. 
+- For more Details Refer To package Dependencies
 
 ## Project Structure
 
 - `src/`
-  - `Blogpost/`: React components representing different pages (e.g., Home, About,Newpost).
+  - `Blogpost/`: React components representing different pages  (e.g., Home, About,Newpost) and components.
   - `ShoppingList`: React components for ToDo sections of the website.
   - `data`: Services for interacting with the JSON server.
   - `App.js`: Main application component.
 
 ## Contributing
 
-We welcome contributions! Please follow our [contribution guidelines](CONTRIBUTING.md) to get started.
+We welcome contributions! Please follow these steps to get started.
+
+- **first Fork It From:**
+  ```bash
+    https://github.com/your-username/BlogPost-Website.git
+
+
+- **Clone It**
+- To geting Started *Follow These step:*
+  1. **To Download All Dependencies:**
+   ```bash
+      npm i 
+
+
+2. **To start Json server:**
+   ```bash
+   npx json-server -p 3500 -w  data/db.json 
+ 
+3. **To start react app:**
+   ```bash
+    npm run start
+
+- Find issues or For UI or UX improvement
+- `Make Changes and Generate PR`
+`Feel Free to ask Questions`
 
 ## License
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Postcard.css'
 import { Link } from 'react-router-dom'
-import DateObject from "react-date-object";
+
 
 
 export default function Postcard({post}) {

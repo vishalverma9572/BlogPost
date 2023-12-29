@@ -3,6 +3,7 @@
 import React from 'react';
 
 const NotFound = () => {
+  
   const notFoundStyle = {
     display: 'flex',
     flexDirection: 'column',

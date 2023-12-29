@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import Postcard from './Postcard'
 import './Home.css'
-import { Link } from 'react-router-dom';
 import Spinner from '../Shopping-list/Spinner';
 
 export default function Home({posts,Showposts,handleshowall,apierror,postloading}) {
@@ -11,9 +10,13 @@ export default function Home({posts,Showposts,handleshowall,apierror,postloading
   
   return (
     <>
-    {apierror !== 'fetch_post_error' ? (
+    {apierror !== 'fetch_post_error' ? 
+    (
+      
       <React.Fragment key="fetch_post_error">
+        
         {postloading && <Spinner/>}
+
         {Showposts !== posts && (
           <div
             onClick={handleshowall}
@@ -34,12 +37,13 @@ export default function Home({posts,Showposts,handleshowall,apierror,postloading
                 fontWeight: '500'
               }}
             >
-              Clear Search
+              Clear Search 
             </span>
           </div>
         )}
   
         <main>
+
           {Showposts.length > 0 ? (
             <>
               {Showposts.map((post) => (
@@ -54,11 +58,14 @@ export default function Home({posts,Showposts,handleshowall,apierror,postloading
           )}
         </main>
       </React.Fragment>
-    ) : (
+
+    ) :
+     (
       <p key="fetch_post_error" className='error-banner'>
         FetchPost error. Please Reload
       </p>
-    )}</>
+    )}
+    </>
   );
   
 }

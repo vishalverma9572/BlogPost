@@ -149,7 +149,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Nav setsearch={setsearch} search={search} handlesearch={handlesearch} FormData={FormData}/>
+      <Nav
+        setsearch={setsearch}
+        search={search}
+        handlesearch={handlesearch}
+        FormData={FormData}
+      />
       <Routes>
         <Route
           path="/"
@@ -177,16 +182,29 @@ function App() {
         />
         <Route
           path="/post/:id"
-          element={<Postpage posts={posts} postloading={postloading} handleDelete={handleDelete} apierror={apierror} handleEdit={handleEdit}/>}
+          element={
+            <Postpage
+              posts={posts}
+              postloading={postloading}
+              handleDelete={handleDelete}
+              apierror={apierror}
+              handleEdit={handleEdit}
+            />
+          }
         />
-        <Route path='/editpost/:id' 
-        element={<NewPost 
-        FormData={FormData}
-        handleFormsave={handleFormsave}
-        setFormData={setFormData} apierror={apierror}/>}
+        <Route
+          path="/editpost/:id"
+          element={
+            <NewPost
+              FormData={FormData}
+              handleFormsave={handleFormsave}
+              setFormData={setFormData}
+              apierror={apierror}
+            />
+          }
         />
         <Route path="/mylist" element={<Content />} />
-        <Route path='*'element={<NotFound/>}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />

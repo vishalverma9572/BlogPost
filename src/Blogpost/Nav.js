@@ -56,9 +56,11 @@ const Nav = ({search, setsearch,handlesearch,FormData}) => {
   
 
   const location=useLocation();
-  // adding Border bottom to current page
+  //To Handle same page for Edit and create post
   const editpostregex=/^\/editpost\/.*$/;
   const postpageregex=/^\/post\/.*$/;
+
+  // adding Border bottom to current page
   useEffect(() => {
     const allMenuItems = document.querySelectorAll('nav li a');
     allMenuItems.forEach((item) => {
@@ -106,15 +108,17 @@ const Nav = ({search, setsearch,handlesearch,FormData}) => {
   
   return (
     <nav style={navStyle}>
+
       <ul style={ulStyle}>
         <li style={liStyle}   ><Link to="/" className='homeli' style={linkStyle} >Home</Link></li>
         <li style={liStyle}  ><Link to="/newpost"  className='newpostli'  style={linkStyle} >NewPost</Link></li>
         <li style={liStyle}  ><Link to="/about" className='aboutli' style={linkStyle} >About</Link></li>
         <li style={liStyle}  ><Link to="/mylist" style={linkStyle} className='toDoli' >ToDoLists</Link></li>
       </ul>
+
       <form style={formStyle} onSubmit={handlesearch}>
         <input type="text" placeholder="Search" style={inputStyle} value={search} onChange={(e)=>setsearch(e.target.value)} />
-        {/* Add your search button or icon here */}
+        
       </form>
     </nav>
   );

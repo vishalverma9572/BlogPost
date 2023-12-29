@@ -18,7 +18,7 @@ export default function About() {
           explicabo.
         </p>
         <p style={{textAlign:'center',marginTop:'3em'}}>
-          Learn more about us on our <a href="/team">Team Page</a>.
+          Learn more about us on our <a href="https://github.com/vishalverma9572/">Team Page</a>.
         </p>
       </div>
     </div>
