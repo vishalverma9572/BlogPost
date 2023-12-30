@@ -5,6 +5,8 @@ export default function Header() {
     backgroundColor: '#333333', // Light grey background color
     padding: '10px', // Adjust padding as needed
     textAlign: 'center', 
+    borderBottomLeftRadius: '5px', 
+    borderBottomRightRadius: '5px',
     // margin:'auto',
     // width:'70%',
     
