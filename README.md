@@ -1,6 +1,6 @@
 # BlogPost Website
-
-🚀 Welcome to the BlogPost website! This project allows you to manage your blogs and Manage a Todo list. Nice thing is that All the data is being updated on Local `Json-Server`. It's a React Project in which axios Jso-server and many npm modules have been Used
+- [Go To Website](https://blog-post-red.vercel.app/)
+🚀 Welcome to the BlogPost website! This project allows you to manage your blogs and Manage a Todo list. Nice thing is that All the data is being updated on Remote  `Json-Server`. It's a React Project in which axios Jso-server and many npm modules have been Used
 
 ## Table of Contents
 - [Features](#features)
@@ -21,8 +21,9 @@
 - Navidate through UI or ('/newpost') to newpost page create a Blog.
 - To Edit or Delete the Post Navigate to respective Postpage
 - To search the Post type Keyword in Searchbox and press enter.
-- Everything saved on local `json server`
-- To start Server 
+- Everything saved on Remote `json server`
+
+- But to Check and Test the Server 
     ```bash
         npx json-server -p 3500 -w  data/db.json`
 - `Both Run on same Json Server.`
@@ -30,7 +31,9 @@
 ### Todo List
 - Create, edit, check, and delete tasks in the Todo page.
 - Tasks are stored in a local JSON server at `http://localhost:3500/`.
-- To start Server 
+- Everything saved on Remote `json server`
+
+- But to Check and Test the Server
     ```bash
         npx json-server -p 3500 -w  data/db.json`
 ### Images
@@ -65,7 +68,9 @@
 
 
 ### Permanent saved
-- All data is saved in `data/db.json`
+
+- All data is saved On a Fake remote server
+-Sample of Data is at `data/db.json` which you can test on Local
 ## To use this And Getting Started 
 
 1. **Clone the repository:**
@@ -75,10 +80,14 @@
 
 2. **To Download All Dependencies:**
    ```bash
-      npm i 
+      npm i
 
 
-3. **To start Json server:**
+> ⚠️ **Warning:**
+>Do Not test on Remote server Change the baseurl of api. Test on Local Server 
+
+
+3. **To start Local Json server:**
    ```bash
    npx json-server -p 3500 -w  data/db.json 
  
@@ -129,6 +138,8 @@ We welcome contributions! Please follow these steps to get started.
    ```bash
       npm i 
 
+> ⚠️ **Warning:**
+>Do Not test on Remote server Change the baseurl of api. Test on Local Server 
 
 2. **To start Json server:**
    ```bash
