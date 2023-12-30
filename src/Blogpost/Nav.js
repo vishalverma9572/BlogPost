@@ -67,6 +67,10 @@ const Nav = ({search, setsearch,handlesearch,FormData}) => {
       item.style.borderBottom = 'none';
       item.style.color = linkStyle.color; // Reset to default color
     });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     if(location.pathname==='/'){
       document.title="Home | BlogPost"
       document.querySelector('.homeli').style.borderBottom = '2px solid #ff7878';
