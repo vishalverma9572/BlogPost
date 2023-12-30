@@ -21,7 +21,7 @@ export default function NewPost({FormData,setFormData,handleFormsave,apierror,sa
       {apierror !== "newpost_error" && apierror !== "edit_error" && (
         <React.Fragment key="fetch_post_error">
           <div className="newp">
-          <>
+          <>{saving && <p className='savingloader'><Spinner text='Saving...'/></p>}
             <form onSubmit={handleFormsave}>
               <label>
                 Title:
@@ -49,7 +49,7 @@ export default function NewPost({FormData,setFormData,handleFormsave,apierror,sa
               <br />
               <button type="submit">Save</button>
             </form>
-            {saving && <p className='savingloader'><Spinner text='Saving...'/></p>}</>
+            </>
           </div>
         </React.Fragment>
       )}
