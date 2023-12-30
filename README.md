@@ -21,7 +21,7 @@
 - Navidate through UI or ('/newpost') to newpost page create a Blog.
 - To Edit or Delete the Post Navigate to respective Postpage
 - To search the Post type Keyword in Searchbox and press enter.
-- Everything saved on Remote `json server`
+- **Everything saved on Remote `json server`**
 
 - But to Check and Test the Server 
     ```bash
@@ -31,7 +31,7 @@
 ### Todo List
 - Create, edit, check, and delete tasks in the Todo page.
 - Tasks are stored in a local JSON server at `http://localhost:3500/`.
-- Everything saved on Remote `json server`
+- **Everything saved on Remote `json server`**
 
 - But to Check and Test the Server
     ```bash
@@ -76,7 +76,7 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/BlogPost-Website.git`
+   git clone https://github.com/vishalverma9572/BlogPost.git 
 
 2. **To Download All Dependencies:**
    ```bash
@@ -129,7 +129,7 @@ We welcome contributions! Please follow these steps to get started.
 
 - **first Fork It From:**
   ```bash
-    https://github.com/your-username/BlogPost-Website.git
+    https://github.com/vishalverma9572/BlogPost.git
 
 
 - **Clone It**
