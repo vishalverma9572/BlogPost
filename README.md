@@ -155,7 +155,7 @@ We welcome contributions! Please follow these steps to get started.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.md).
 
 ## Available Scripts
 
