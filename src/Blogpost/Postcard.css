@@ -4,7 +4,7 @@
     padding: 16px;
     margin: 16px;
     width: 42%;
-    min-width: 300px;
+    min-width: 270px;
     
     text-align: start;
   }
@@ -30,5 +30,10 @@
     margin: 8px 0;
     font-family:  sans-serif;
     line-height: 23px;
+  }
+  @media only screen and (max-width: 768px) {
+    .post-card{
+      margin-left: 10px;
+    }
   }
   

@@ -65,3 +65,26 @@
     color: #ff7878;
   }
   
+  .savingloader img{
+    margin-top: 0vh !important;
+  }
+  @media only screen and (max-width: 768px) {
+    .post-page p{
+      font-size: 0.8rem;
+    }
+    .post-page{
+      width: 95%;
+      padding: 0;
+    }
+    .post-page h2{
+      margin-left: 0;
+    }
+    .post-content{
+      max-width: 95%;
+    }
+    .post-content p{
+      padding: 3px;
+      font-size: 1rem;
+    }
+      
+  }

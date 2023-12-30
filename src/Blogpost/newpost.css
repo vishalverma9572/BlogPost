@@ -27,6 +27,7 @@
     box-sizing: border-box;
     font-size: 1rem;
     color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .newp input::placeholder,
   .newp textarea::placeholder{
@@ -46,5 +47,13 @@
   
   .newp button:hover {
     background-color: #0056b3;
+  }
+  @media only screen and (max-width: 768px) {
+    .newp form{
+      width: 85%;
+    }
+    .newp label{
+      margin-left: 0;
+    }
   }
   

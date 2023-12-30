@@ -8,10 +8,10 @@ const Footer = () => {
     color: '#fff',
     padding: '20px',
     textAlign: 'center',
-    marginTop: '20px',
+    marginTop: '50px',
     
-    width: '96%',
-    
+    width: '96% !important ',
+   
   };
 
   return (

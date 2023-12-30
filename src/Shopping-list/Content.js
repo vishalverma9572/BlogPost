@@ -7,7 +7,7 @@ import apirequest from "./apirequest";
 import './content.css'
 
 export default function Content() {
-  const Api_url = "http://localhost:3500/items";
+  const Api_url = "https://blogpost-p23o.onrender.com/items";
   const [fetcherror, setFetcherror] = useState(null);
   const [Loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);

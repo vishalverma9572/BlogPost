@@ -10,6 +10,7 @@
   
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -57,6 +58,18 @@
   margin-bottom: 15px !important;
   line-height: 25px !important;
 
+}
+.deletingloader img{
+  margin-top: 0vh !important;
+}
+@media only screen and (max-width: 768px) {
+  .App{
+    width:95%;
+    /* mar */
+  }
+  Footer{
+    width: 88% !important;
+  }
 }
 
 

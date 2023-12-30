@@ -4,7 +4,7 @@ import { useParams,Link } from 'react-router-dom';
 import Spinner from '../Shopping-list/Spinner';
 
 
-export default function Postpage({posts,handleDelete,handleEdit,apierror,postloading}) {
+export default function Postpage({posts,handleDelete,handleEdit,apierror,postloading,deleting}) {
   const {id}= useParams()
   
   const post=posts.find((post)=> (post.id).toString()==id);
@@ -14,6 +14,7 @@ export default function Postpage({posts,handleDelete,handleEdit,apierror,postloa
       {apierror !== "fetch_post_error" ? (
         <React.Fragment key="postpage_error">
           {post ? (
+            <>
             <div className="post-page">
               <h2>&#x21aa;&nbsp;{post.title}</h2>
               <p>{post.datetime}</p>
@@ -37,7 +38,9 @@ export default function Postpage({posts,handleDelete,handleEdit,apierror,postloa
                   &nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;
                 </button>
               </div>
+              
             </div>
+            {deleting && <p className='detetingloader'><Spinner text='Deleting ...'/></p>}</>
           ) : (
             <>
               {!postloading && (

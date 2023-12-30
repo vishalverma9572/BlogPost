@@ -27,8 +27,9 @@
     height: 30px;
     margin: 10px;
     color: #124bc6;
-    position: relative;
+    /* position: relative; */
     right: 10px;
+    
   }
   .content ul li svg:hover,
   .content ul li svg:focus{
@@ -96,5 +97,19 @@
     font-size: 1.1rem;
     border: 2px solid rgb(4, 4, 4);
     border-radius: 5px;
+  }
+  @media only screen and (max-width: 768px) {
+    .content ul li{
+      width: 95%;
+      margin-left: -0.5em;
+    }
+    .content .addform{
+      width: 100%;
+      margin-left: 1em;
+    }
+    .content #search-items{
+      width: 82%;
+    }
+    
   }
   

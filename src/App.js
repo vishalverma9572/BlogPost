@@ -17,6 +17,8 @@ function App() {
   const navigate = useNavigate();
   const [apierror, setapierror] = useState(null)
   const [postloading, setpostloading] = useState(true)
+  const [deleting, setdeleting] = useState(false)
+  const [saving, setsaving] = useState(false)
   
   const [posts, setPosts] = useState([]);
   useEffect(()=>{
@@ -71,11 +73,13 @@ function App() {
   }, [posts]);
 
   const handleDelete = async (id) => {
+    setdeleting(true)
     try {
       const postlists = posts.filter((post) => post.id !== id);
       const response= await api.delete(`/posts/${id}`)
       if(apierror==='Delete_error') setapierror(null)
       setPosts(postlists);
+      setdeleting(false);
       navigate("/");
       
     } catch (error) {
@@ -91,11 +95,13 @@ function App() {
   const handleEdit=(id)=>{
     const post=posts.find((post)=>(post.id)===id)
     
+    
     setFormData(post);
     navigate(`/editpost/${id}`)
     
   }
   const handleFormsave = async(e) => {
+    setsaving(true)
     e.preventDefault();
     if((FormData.id) && (FormData.title) && (FormData.body)){
       const id=Number(FormData.id)
@@ -108,6 +114,7 @@ function App() {
         const updatedpost={id,title:FormData.title,datetime,body:FormData.body}
         const response= await api.put(`/posts/${id}`,updatedpost);
         if(apierror==='edit_error') setapierror(null)
+        setsaving(false)
         setPosts(allposts)
         
         navigate(`/post/${id}`)
@@ -117,6 +124,7 @@ function App() {
         })
       }catch{
         setapierror('edit_error');
+        setsaving(false)
       }
     }
     else{
@@ -131,12 +139,14 @@ function App() {
           if(apierror==='newpost_error') setapierror(null)
           setPosts(allposts);
           navigate(`/post/${id}`)
+          setsaving(false)
           setFormData({
             title:'',
             body:''
           })
         }catch(error){
           setapierror('newpost_error')
+          setsaving(false)
         }
         
         
@@ -177,6 +187,7 @@ function App() {
               handleFormsave={handleFormsave}
               setFormData={setFormData}
               apierror={apierror}
+              saving={saving}
             />
           }
         />
@@ -189,6 +200,7 @@ function App() {
               handleDelete={handleDelete}
               apierror={apierror}
               handleEdit={handleEdit}
+              deleting={deleting}
             />
           }
         />
@@ -200,6 +212,7 @@ function App() {
               handleFormsave={handleFormsave}
               setFormData={setFormData}
               apierror={apierror}
+              saving={saving}
             />
           }
         />

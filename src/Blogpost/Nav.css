@@ -3,3 +3,29 @@ nav ul li a:hover {
     color: #ff7878 !important;
     
 }
+@media only screen and (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      padding: 10px; /* Adjust padding for smaller screens */
+      
+    }
+  
+    nav ul {
+      margin-top: 10px; /* Adjust margin for smaller screens */
+    }
+  
+    nav li {
+      margin-right: 0; /* Remove right margin for smaller screens */
+      margin-bottom: 10px; /* Add bottom margin for smaller screens */
+    }
+  
+    nav form {
+      margin-top: 10px; /* Adjust margin for smaller screens */
+      width: 100% !important; /* Make the form full-width on smaller screens */
+    }
+  
+    nav input {
+      width: 100%; /* Make the input full-width on smaller screens */
+      margin-right: 0; /* Remove right margin for smaller screens */
+    }
+  }

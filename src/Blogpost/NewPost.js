@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import './newpost.css'
+import Spinner from '../Shopping-list/Spinner';
 
-export default function NewPost({FormData,setFormData,handleFormsave,apierror}) {
+export default function NewPost({FormData,setFormData,handleFormsave,apierror,saving}) {
   
   const handlechange=(e)=>{
     setFormData({...FormData,
@@ -20,6 +21,7 @@ export default function NewPost({FormData,setFormData,handleFormsave,apierror}) 
       {apierror !== "newpost_error" && apierror !== "edit_error" && (
         <React.Fragment key="fetch_post_error">
           <div className="newp">
+          <>
             <form onSubmit={handleFormsave}>
               <label>
                 Title:
@@ -47,6 +49,7 @@ export default function NewPost({FormData,setFormData,handleFormsave,apierror}) 
               <br />
               <button type="submit">Save</button>
             </form>
+            {saving && <p className='savingloader'><Spinner text='Saving...'/></p>}</>
           </div>
         </React.Fragment>
       )}
